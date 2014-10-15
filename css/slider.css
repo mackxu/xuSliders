@@ -1,0 +1,26 @@
+body, ul, li { padding: 0; margin: 0; }
+.xuSlider { width: 600px; height: 300px; overflow: hidden; position: relative; }
+.xuSlider { margin: 0 auto; }
+.viewport { position: relative; overflow: hidden; }
+.sliders { width: 500%; }
+.sliders:after { content: "."; display: block; visibility: hidden; height: 0; clear: both; }
+.sliders li { float: left; width: 600px; }
+.direction-nav a { 
+	display: inline-block; position: absolute; top: calc( 50% - 33px );
+	color: #eee;
+	transition: all .2s; 
+}
+.direction-nav i { display: none; }
+/*.prev { left: -60px; } 
+.next { right: -60px; }
+.xuSlider:hover .prev { left: 4px; }  
+.xuSlider:hover .next { right: 4px; }  */
+
+.prev { left: 4px; } 
+.next { right: 4px; }
+
+.control-nav { position: absolute; bottom: 20px; width: 100%; text-align: center; }
+.control-nav li { margin: 0 4px; display: inline-block; zoom: 1; *display: inline; }
+.control-nav a { width: 40px; height: 11px; display: block; background-color: rgba(255, 255, 255, 0.5); text-indent: -999em; 1border-radius: 50%; }
+.control-nav a:hover { background-color: rgba(255, 255, 255, 0.8); }
+.control-nav .active a { background-color: rgba(255, 255, 255, 0.9); cursor: pointer; }

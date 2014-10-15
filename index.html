@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html lang="en-us" class="lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>    <html lang="en-us" class="lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>    <html lang="en-us" class="lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en-us"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>xuSlider焦点图插件</title>
+  <meta name="viewport" content="width=device-width">
+  <link rel="stylesheet" href="css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/slider.css">
+</head>
+<body>
+<div class="xuSlider">
+	<div class="viewport">
+		<ul class="sliders">
+			<li class="slider-active"><img src="images/sliders0.jpg" alt=""></li>
+			<li><img src="images/sliders1.jpg" alt=""></li>
+			<li><img src="images/sliders2.jpg" alt=""></li>
+			<li><img src="images/sliders3.jpg" alt=""></li>
+			<li><img src="images/sliders4.jpg" alt=""></li>
+		</ul>
+	</div>
+	<div class="direction-nav">
+		<a href="javascript:;" class="prev icon-circle-arrow-left icon-4x"><i>Previous</i></a>
+		<a href="javascript:;" class="next icon-circle-arrow-right icon-4x"><i>Next</i></a>
+	</div>
+	<div class="control-nav">
+		<li data-id="1" class="active"><a href="javascript:;">1</a></li>
+		<li data-id="2"><a href="javascript:;">2</a></li>
+		<li data-id="3"><a href="javascript:;">3</a></li>
+		<li data-id="4"><a href="javascript:;">4</a></li>
+		<li data-id="5"><a href="javascript:;">5</a></li>
+	</div>	
+</div>
+<script type="text/javascript" src="../jquery-1.9.0.js"></script>
+<script type="text/javascript" src="./jquery.xuSlider.js"></script>
+<script>
+	$('.xuSlider').xuSlider();
+</script>
+</body>
+</html>

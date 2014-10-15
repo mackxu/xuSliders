@@ -1,0 +1,11 @@
+{
+	// "curly": true,			// Require {} for every new block or scope
+	"esnext": false,		// allow ES.next() syntax
+	// "globalstrict": true,	// enables 'strict'
+	"moz": true,			// allow Mozilla specific syntax
+	"boss": true,
+	"validthis": true,
+	"globals": {			// additional predefined global varibles
+		"jQuery": true
+	}
+}
