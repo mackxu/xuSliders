@@ -28,9 +28,9 @@
             var $el = this.$el = $(this.element);
             var options = this.options; 
             this.$sliders = $el.find('ul');
-            // this.$controlNavs = $el.find('.control-nav li');
             this.unit = -$el.width();               // 每次动作的滚动长度单位
             this.autoTimer = null;
+            // 点击事件类型
             this.evType = window.ontouchstart ? 'touchstart' : 'click';                  
             // 调整结构和样式
             var $slidersAll = this.$slidersAll = this.$sliders.find('li');
@@ -39,15 +39,12 @@
             // 绘制配置的样式
             $slidersAll.css({ width: -this.unit, height: $el.height() });
             this.slideRender();
-
             // 标记当前活动帧
             $slidersAll.eq(options.startAt).addClass('slider-active');
-            // 为DOM添加监听事件
-            this.addEvent();
-            options.controlNav && this.controlNav();
-            options.directionNav && this.directionNav();
-            // 默认自动slide
-            options.autoSlide && this.autoSlide();
+            options.controlNav && this.controlNav();        // 添加原点图标
+            options.directionNav && this.directionNav();    // 添加左右箭头
+            options.autoSlide && this.autoSlide();          // 默认自动slide
+            options.pauseOnHover && this.pauseOnHover();
         },
         // 如果动画效果为slide，重新渲染结构
         slideRender: function() {
@@ -133,7 +130,8 @@
         clearAutoSlideTimer: function() {
             this.autoTimer != null && clearInterval(this.autoTimer);
         },
-        addEvent: function() {
+        pauseOnHover: function() {
+            // 鼠标在展示区时，暂停播放直到鼠标离开
             var self = this, options = self.options;
             // hover时停止自动播放
             self.$el.on('mouseenter', function() {
