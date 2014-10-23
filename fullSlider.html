@@ -12,12 +12,14 @@
   <style>
   body, ul { margin: 0; padding: 0; }
   ul { list-style: none; }
-  .fullSlider { position: relative; width: 100%; margin-top: 100px; }
+  .fullSlider { position: relative; width: 100%; overflow: hidden; height: 200px; margin-top: 100px; }
   .sliders:after { content: ""; display: table; clear: both; }
-  .sliders li { float: left; margin: 0 4px;  }
-
-
-  .sliders { width: 1872px; position: absolute; left: -104px; }
+  .sliders li { float: left; margin-right: 8px;  }
+  .direction-nav a { position: absolute; top: calc(50% - 32px); width: 48px; height: 64px; background: rgba(0, 0, 0, 0.4) url(images/slider-direction.png) no-repeat; text-indent: -999em; }
+  .direction-nav a:hover { background-color: rgba(0, 0, 0, 0.6); }
+  .direction-nav .prev { background-position: 12px 15px; left: 5px;  }
+  .direction-nav .next { background-position: 14px -34px; right: 5px; }
+  .sliders { width: 4160px; position: absolute; height: 200px; }
   </style>
 </head>
 <body>
@@ -30,11 +32,30 @@
     <li><img src="images/fullSlider3.jpg" alt=""></li>
     <li><img src="images/fullSlider4.jpg" alt=""></li>
     <li><img src="images/fullSlider5.jpg" alt=""></li>
+    <li><img src="images/fullSlider0.jpg" alt=""></li>
+    <li><img src="images/fullSlider1.jpg" alt=""></li>
+    <li><img src="images/fullSlider2.jpg" alt=""></li>
+    <li><img src="images/fullSlider3.jpg" alt=""></li>
+    <li><img src="images/fullSlider4.jpg" alt=""></li>
+    <li><img src="images/fullSlider5.jpg" alt=""></li>
     <li><img src="images/fullSlider6.jpg" alt=""></li>
     <li><img src="images/fullSlider7.jpg" alt=""></li>
     <li><img src="images/fullSlider8.jpg" alt=""></li>
+    <li><img src="images/fullSlider6.jpg" alt=""></li>
+    <li><img src="images/fullSlider7.jpg" alt=""></li>
+    <li><img src="images/fullSlider8.jpg" alt=""></li>
+    <li><img src="images/fullSlider0.jpg" alt=""></li>
+    <li><img src="images/fullSlider1.jpg" alt=""></li>
   </ul>
+  <div class="direction-nav">
+    <a href="javascript:;" class="prev">previous</a>
+    <a href="javascript:;" class="next">next</a>
+  </div>
 </div>
-
+<script type="text/javascript" src="libs/jquery-2.0.3.js"></script>
+<script type="text/javascript" src="jquery.fullSlider.js"></script>
+<script>
+  $('.fullSlider').fullSlider();
+</script>
 </body>
 </html>
