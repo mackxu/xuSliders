@@ -8,7 +8,7 @@
 body, ul, li, ol { padding: 0; margin: 0; }
 ul, ol { list-style: none; }
 .xuSlider { width: 600px; height: 300px; overflow: hidden; position: relative; }
-.xuSlider { margin: 20px auto 0; }
+.xuSlider { margin: 20px auto 0; box-shadow: 0 0 5px #000; }
 .viewport { height: 100%; }
 .sliders { position: absolute; left: 0; }
 .sliders:after { content: "."; display: block; visibility: hidden; height: 0; clear: both; }
