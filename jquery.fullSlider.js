@@ -2,7 +2,9 @@
     // Create the defaults once
     var pluginName = 'fullSlider',
         defaults = {
-            animateTime: 1000
+            animateTime: 1000,
+            itemWidth: 0,
+            itemMargin: 0
         };
 
     function Plugin( element, options ) {
@@ -18,15 +20,17 @@
     Plugin.prototype.init = function () {
         // Place initialization logic here
         var $el = $(this.element);
+        var options = this.options;
 
         this.$sliderContainer = $el.find('ul');
         this.$directionNav = $el.find('.direction-nav');
         this.$sliders = this.$sliderContainer.find('li');
         this.slidersNum = this.$sliders.length;                 // 展示内容个数
-        this.sliderContainerWidth = this.$sliderContainer.width();
+        this.sliderContainerWidth = this.slidersNum * ( options.itemWidth + options.itemMargin );
         this.sliderUnit = $(window).width();
         // 如果不能铺屏
         if(this.sliderContainerWidth < this.sliderUnit) return false;
+        this.$sliderContainer[0].style.width = this.sliderContainerWidth + 'px';
         // 在原基础上左右插入
         this.$firstSliders = this.$sliders.clone();
         this.$lastSliders = this.$sliders.clone();

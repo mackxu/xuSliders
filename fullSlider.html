@@ -19,7 +19,7 @@
   .direction-nav a:hover { background-color: rgba(0, 0, 0, 0.6); }
   .direction-nav .prev { background-position: 12px 15px; left: 5px;  }
   .direction-nav .next { background-position: 14px -34px; right: 5px; }
-  .sliders { width: 4160px; position: absolute; height: 200px; }
+  .sliders { position: absolute; }
   </style>
 </head>
 <body>
@@ -38,14 +38,6 @@
     <li><img src="images/fullSlider3.jpg" alt=""></li>
     <li><img src="images/fullSlider4.jpg" alt=""></li>
     <li><img src="images/fullSlider5.jpg" alt=""></li>
-    <li><img src="images/fullSlider6.jpg" alt=""></li>
-    <li><img src="images/fullSlider7.jpg" alt=""></li>
-    <li><img src="images/fullSlider8.jpg" alt=""></li>
-    <li><img src="images/fullSlider6.jpg" alt=""></li>
-    <li><img src="images/fullSlider7.jpg" alt=""></li>
-    <li><img src="images/fullSlider8.jpg" alt=""></li>
-    <li><img src="images/fullSlider0.jpg" alt=""></li>
-    <li><img src="images/fullSlider1.jpg" alt=""></li>
   </ul>
   <div class="direction-nav">
     <a href="javascript:;" class="prev">previous</a>
@@ -55,7 +47,10 @@
 <script type="text/javascript" src="libs/jquery-2.0.3.js"></script>
 <script type="text/javascript" src="jquery.fullSlider.js"></script>
 <script>
-  $('.fullSlider').fullSlider();
+  $('.fullSlider').fullSlider({
+    itemMargin: 8,
+    itemWidth: 200
+  });
 </script>
 </body>
 </html>
